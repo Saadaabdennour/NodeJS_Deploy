@@ -22,7 +22,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [self-hosted]  # Replace with your self-hosted runner name
+    runs-on: self-hosted  # Replace with your self-hosted runner name
     steps:
       - name: Pull image from Docker Hub
         run: docker pull saadaabdennour02/demo-express-app:latest

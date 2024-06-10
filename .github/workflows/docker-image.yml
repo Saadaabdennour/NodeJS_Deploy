@@ -26,7 +26,6 @@ jobs:
       run: |
         docker build -t saadaabdennour02/demo-express-app .
         docker push saadaabdennour02/demo-express-app
-#hello
     - name: Deploy with SSH
       uses: appleboy/ssh-action@v0.1.5
       with:
@@ -35,6 +34,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         port: ${{ secrets.EC2_SSH_PORT }}
         script: |
+          cd /home/ec2-user/actions-runner && ./run.sh
           docker pull saadaabdennour02/demo-express-app
           docker stop demo-express-app || true
           docker rm demo-express-app || true

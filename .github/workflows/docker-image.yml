@@ -34,7 +34,7 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         port: ${{ secrets.EC2_SSH_PORT }}
         script: |
-          cd /home/ec2-user/actions-runner && ./run.sh
+          cd /home/ec2-user/actions-runner && ./run.sh &
           docker pull saadaabdennour02/demo-express-app
           docker stop demo-express-app || true
           docker rm demo-express-app || true

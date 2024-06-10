@@ -45,4 +45,4 @@ jobs:
             docker pull saadaabdennour02/demo-express-app
             docker stop demo-express-app || true
             docker rm demo-express-app || true
-            docker run -d -p 3000:3000 --name demo-express-app saadaabdennour02/demo-express-app
+            docker run -d -p 80:3000 --name demo-express-app saadaabdennour02/demo-express-app

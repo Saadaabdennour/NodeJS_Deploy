@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/*", (req, res) => {
-    res.send('Hello World SAADA ABDO');
+    res.send('Hello World!');
 });
 
 // Error handling middleware

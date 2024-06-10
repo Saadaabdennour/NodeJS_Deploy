@@ -29,8 +29,8 @@ jobs:
 
       - name: Delete old container
         run: |
-          docker stop demo-express-app-container || true
-          docker rm demo-express-app-container || true
+          docker stop demo-express-app || true
+          docker rm demo-express-app || true
 
       - name: Run Docker container
-        run: docker run -d -p 5000:5000 --name demo-express-app-container saadaabdennour02/demo-express-app:latest
+        run: docker run -d -p 3000:3000 --name demo-express-app saadaabdennour02/demo-express-app:latest
